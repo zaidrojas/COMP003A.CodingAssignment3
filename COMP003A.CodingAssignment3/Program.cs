@@ -27,9 +27,8 @@ namespace COMP003A.CodingAssignment3
                     income = double.Parse(Console.ReadLine());
                     if (income.GetType() != typeof(double))
                         throw new Exception("Input Must Be A Number");
-                    break;
 
-
+                    // Main Menu
                     Console.WriteLine("\nMenu:");
                     Console.WriteLine("1. Add an Expense");
                     Console.WriteLine("2. View Expenses and Budget");
@@ -37,6 +36,26 @@ namespace COMP003A.CodingAssignment3
                     Console.WriteLine("4. Exit");
                     Console.Write("Enter Your Choice: ");
                     option = int.Parse(Console.ReadLine());
+                    if (option.GetType() != typeof(int))
+                        throw new Exception("Input Must Be A Integer");
+                    if (4 < option || option < 1)
+                        throw new Exception("Input Must Be 1, 2, 3, or 4.");
+
+                    // Handle The Selection From Menu
+                    switch (option)
+                    {
+                        case (1): // Add Expense
+                            break;
+                        case (2): // View Expenses and Budget
+                            break;
+                        case (3): // Remove Expense
+                            break;
+                        case (4): // Exit
+                            break;
+                        default:
+                            Console.WriteLine("WIP");
+                            break;
+                    }
                 }
                 catch (Exception e)
                 {
